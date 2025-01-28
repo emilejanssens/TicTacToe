@@ -89,7 +89,7 @@ class TicTacToe {
         document.getElementById("game").removeAttribute("hidden");
         const root = document.querySelector(":root");
         root.style.setProperty("--sizeTable", this.sizeBoard);
-        const divGame = document.getElementById("divGame")
+        const divGame = document.getElementById("div-game")
         const table = document.createElement("table");
         const tbody = document.createElement("tbody");
         let countCell = 0;
@@ -216,7 +216,7 @@ class TicTacToe {
 
     //Permet de relancer une nouvelle partie avec les memes parametres que la precedente.
     restartGame() {
-        const divGame = document.getElementById("divGame");
+        const divGame = document.getElementById("div-game");
         divGame.textContent = "";
         const divEnd = document.getElementById("end-container");
         divEnd.textContent = "";
@@ -227,7 +227,7 @@ class TicTacToe {
     goToSettings() {
         const game = document.getElementById("game");
         game.setAttribute("hidden", "true");
-        const divGame = document.getElementById("divGame");
+        const divGame = document.getElementById("div-game");
         divGame.textContent = "";
         const divEnd = document.getElementById("end-container");
         divEnd.textContent = "";
