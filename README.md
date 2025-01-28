@@ -3,7 +3,8 @@
 To run the TicTacToe game, follow these steps:
 
 1. **Install Node.js & npm if you don't have it** :
-Go on [Node.js website](https://nodejs.org/en/download).
+Go on [Node.js website](https://nodejs.org/en/download) and follow the instructions on the page or download the installer file `.msi`.
+
 
 2. **Install the HTTP server** :
    You need to install `http-server` globally by running the following command:
