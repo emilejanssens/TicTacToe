@@ -1,10 +1,11 @@
 const symbols = ["X", "O"];
 const size = 3;
 
+//Permet de generer le tableau deroulant pour selectionner son symbole
 function insertSymbolsChoices() {
     const select = document.getElementById("symbol-select");
     const titleTeam = document.getElementById("title-teams");
-    titleTeam.textContent = "Choose your team, "+ symbols[0]+" or "+symbols[1]+" ?";
+    titleTeam.textContent = "Choose your team, " + symbols[0] + " or " + symbols[1] + " ?";
     symbols.forEach((_, index) => {
         const option = document.createElement("option");
         option.value = symbols[index];
@@ -14,6 +15,8 @@ function insertSymbolsChoices() {
 }
 document.addEventListener("DOMContentLoaded", insertSymbolsChoices);
 
+
+//Permet de creer la partie apres le 
 function handlerFormSymbol(event) {
     event.preventDefault();
     const symbol = document.getElementById("symbol-select").value;
@@ -119,7 +122,7 @@ class TicTacToe {
         }
     }
 
-    
+
     //Permet au joueur de dessiner son symbol dans une case libre
     movePlayer(event) {
         if (this.isTurnOfPlayer == true) {
@@ -156,11 +159,11 @@ class TicTacToe {
         this.checkWinner(this.symbolBot);
 
     }
-    
+
     //Verifie après chaque tour si il y a un gagnant parmis les combinaisons de victoire possible ou si egalite.
     checkWinner(lastPlayer) {
         if (this.boardArray.filter(value => value !== null).length >= (2 * this.sizeBoard - 1)) {
-                this.arrayCombiWin.forEach((value) => {
+            this.arrayCombiWin.forEach((value) => {
                 if (this.thereIsAWinner) return;
                 const combi = value.map(index => this.boardArray[index]);
                 if (combi.every(value => value == this.symbolBot) || combi.every(value => value == this.symbolPlayer)) {
@@ -185,7 +188,7 @@ class TicTacToe {
         }
 
     }
-    
+
     //Gere la fin de partie si un gagnant ou une egalite est donnee. Annonce le gagnant et les bouttons pour recommencer.
     endGame(winner) {
         const divEnd = document.getElementById("end-container");
@@ -195,7 +198,7 @@ class TicTacToe {
         if (winner == null) {
             message = "Draw ! Try again !";
         } else {
-            message = winner + " win the game ! ";
+            message = winner + " wins the game ! ";
         }
         announceWinner.textContent = message;
         divEnd.appendChild(announceWinner);
@@ -223,7 +226,7 @@ class TicTacToe {
     //Permet de retourner au menu des parametres.
     goToSettings() {
         const game = document.getElementById("game");
-        game.setAttribute("hidden","true");
+        game.setAttribute("hidden", "true");
         const divGame = document.getElementById("divGame");
         divGame.textContent = "";
         const divEnd = document.getElementById("end-container");

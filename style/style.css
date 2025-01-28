@@ -12,13 +12,17 @@ html, body {
   align-items: center;    
   background-color: #f4f4f9; 
 }
+.game-container{
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
 .table-container {
-  width: 80%; 
-  padding-top: 1%;
+  width: 100%; 
   display: flex;
-  justify-content: center; 
-  align-items: center;    
-
+  margin: 10% auto;
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
 table {
@@ -44,12 +48,8 @@ td .content {
   align-items: center;
   font-size: 300%;
 }
-.divgame{
-  width: 40%;
-  padding-top: 5%;
-  align-items: center;
-  justify-content: center;
-}
+
+
 
 tr:nth-child(even) td:nth-child(odd),
 tr:nth-child(odd) td:nth-child(even) {

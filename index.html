@@ -9,29 +9,23 @@
         <script src="js/script.js" defer></script>
 
     </head>
+    
 <body>
 <div id="settings-game">
     <h1>Emile's TicTacToe</h1>
     <h2 id="title-teams"></h2>
     <form onsubmit="handlerFormSymbol(event)">
         <label for="symbol-select">Choose your team :</label>
-        <select name="symbol-select" id="symbol-select">
-
-        </select>
+        <select name="symbol-select" id="symbol-select"></select>
         <br><br>
         <input type="submit" value="Start the game">
-
 </form>
 </div>
-<div id="game" class="divgame" hidden="true">
+
+<div id="game" class="game-container" hidden="true">
     <h1>Let's play !</h1>
-    <div id="divGame">
-
-    </div>
-    <div id="end-container">
-
-    </div>
+    <div id="divGame"></div>
+    <div id="end-container"></div>
 </div>
-
 </body>
 </html>
